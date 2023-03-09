@@ -7,7 +7,18 @@ This repository has the sole purpose of speeding up the setup of ForcAD with ser
 
 ## Game Master
 
-### Prerequisites
+### Automatic Script Setup
+You can setup your Game Master with the automatic script `setup.sh`:
+```shell
+wget https://raw.githubusercontent.com/DnyyGzd/ForcAD/main/setup.sh
+bash setup.sh
+```
+You have to configure manually.
+
+
+### Manual Setup
+
+#### Prerequisites
 * Update your system
 ```shell
 sudo apt update && sudo apt full-upgrade
@@ -36,17 +47,20 @@ sudo usermod -aG docker $USER
 newgrp docker
 ```
 
-### Setup
+#### Setup
 * Clone this repository
   * `git clone https://github.com/DnyyGzd/ForcAD`
-* Open `config.yml` file
-  * Change admin `username` and `password`
-  * Delete team example and add teams
-  * Change `timezone` and `start_time` (optional)
 * Install `cli/requirements.txt`
   * `pip3 install -r cli/requirements.txt`
 * Make `control.py` runnable
   * `chmod +x control.py`
+
+
+### Configuration
+* Open `config.yml` file
+  * Change admin `username` and `password`
+  * Delete team example and add teams
+  * Change `timezone` and `start_time` (optional)
 * Run `./control.py setup`
 * Run `./control.py start`
 * Run `./control.py print_tokens` and send them to each team correspondingly
