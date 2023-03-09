@@ -88,12 +88,12 @@ sudo apt install python3-pip
 ```
 
 ### Setup
-You need to download only services directory
+You need to download only services directory (will be uploaded in the future)
 * Install every `requirements.txt` in services' directory
 ```shell
 pip3 install -r requirements.txt
 ```
 * Run service, for example:
 ```shell
-python3 flags_shop/app.py
+python3 service_name/app.py
 ```
