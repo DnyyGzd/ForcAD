@@ -35,7 +35,6 @@ sudo apt install python3-pip
 ```shell
 sudo apt install docker.io
 sudo systemctl enable docker --now
-sudo usermod -aG docker $USER
 ```
 * `docker-compose`
 ```shell
@@ -43,8 +42,8 @@ curl -s https://api.github.com/repos/docker/compose/releases/latest | grep brows
 chmod +x docker-compose-linux-x86_64
 sudo mv docker-compose-linux-x86_64 /usr/local/bin/docker-compose
 rm docker-compose-linux-x86_64.sha256
+sudo groupadd docker
 sudo usermod -aG docker $USER
-newgrp docker
 ```
 
 #### Setup
@@ -57,6 +56,7 @@ newgrp docker
 
 
 ### Configuration
+**_If you just installed docker, relogin the user or reboot_**
 * Open `config.yml` file
   * Change admin `username` and `password`
   * Delete team example and add teams
