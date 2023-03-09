@@ -86,11 +86,14 @@ sudo apt update && sudo apt full-upgrade
 ```shell
 sudo apt install python3-pip
 ```
-* Install `requirements.txt`
+
+### Setup
+You need to download only services directory
+* Install every `requirements.txt` in services' directory
 ```shell
 pip3 install -r requirements.txt
 ```
-* Run service
+* Run service, for example:
 ```shell
 python3 flags_shop/app.py
 ```
