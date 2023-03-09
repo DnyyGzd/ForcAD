@@ -1,7 +1,7 @@
 # ForcAD
 
 ## Initial premise
-ForcAD was not designed and created by me. I used the [ForcAD]{https://github.com/pomo-mondreganto/ForcAD} made available by [pomo-mondreganto]{https://github.com/pomo-mondreganto}.
+ForcAD was not designed and created by me. I used the [ForcAD](https://github.com/pomo-mondreganto/ForcAD) made available by [pomo-mondreganto](https://github.com/pomo-mondreganto).
 This repository has the sole purpose of speeding up the setup of ForcAD with services and checkers written by me and my team.
 
 
