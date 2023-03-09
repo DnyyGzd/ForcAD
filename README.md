@@ -15,7 +15,7 @@ This repository has the sole purpose of speeding up the setup of ForcAD with ser
 * Open `config.yml` file
    * Change admin `username` and `password`
    * Delete team example and add teams
-   * Change `timezone` and `start_time` if you want
+   * Change `timezone` and `start_time` (optional)
    
 * Install `cli/requirements.txt`
   * `pip3 install -r cli/requirements.txt`
