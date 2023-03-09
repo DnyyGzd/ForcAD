@@ -13,7 +13,7 @@ You can setup your Game Master with the automatic script `setup.sh`:
 wget https://raw.githubusercontent.com/DnyyGzd/ForcAD/main/setup.sh
 bash setup.sh
 ```
-You have to configure manually.
+**_You have to configure manually_**
 
 
 ### Manual Setup
