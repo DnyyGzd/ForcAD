@@ -10,7 +10,6 @@ chmod +x docker-compose-linux-x86_64
 sudo mv docker-compose-linux-x86_64 /usr/local/bin/docker-compose
 rm docker-compose-linux-x86_64.sha256
 sudo usermod -aG docker $USER
-newgrp docker
 
 git clone https://github.com/DnyyGzd/ForcAD
 pip3 install -r ForcAD/cli/requirements.txt
