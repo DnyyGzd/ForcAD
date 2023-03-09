@@ -1,0 +1,73 @@
+limit_conn_zone $binary_remote_addr zone=http_ip_conn:16m;
+limit_req_zone $http_x_team_token zone=token_limit:64m rate=2r/s;
+
+resolver ${DNS_RESOLVER} valid=10s ipv6=off;
+resolver_timeout 5s;
+
+server {
+    listen 80;
+
+    server_name default;
+
+    location /flower {
+        set $backend flower:5000;
+        proxy_pass http://$backend;
+        include proxy_params_ws;
+    }
+
+    location /api/client {
+        set $backend client-api:5000;
+        proxy_pass http://$backend;
+        include proxy_params;
+    }
+
+    location /api/admin {
+        set $backend admin-api:5000;
+        proxy_pass http://$backend;
+        include proxy_params;
+    }
+
+    location /api/metrics {
+        set $backend monitoring:5000;
+        proxy_pass http://$backend;
+        include proxy_params;
+    }
+
+    location /flags {
+        set $backend http-receiver:5000;
+        proxy_pass http://$backend;
+        include proxy_params;
+
+        client_max_body_size 10K;
+
+        limit_conn http_ip_conn 10;
+        limit_conn_log_level info;
+        limit_conn_status 429;
+
+        limit_req zone=token_limit;
+        limit_req_log_level info;
+        limit_req_status 429;
+    }
+
+    location /api/events {
+        set $backend events:5000;
+        proxy_pass http://$backend;
+        include proxy_params_ws;
+    }
+
+    location /socket.io {
+        set $backend events:5000;
+        proxy_pass http://$backend;
+        include proxy_params_ws;
+    }
+
+    location / {
+        gzip on;
+        gzip_static on;
+        gzip_types text/plain text/css text/javascript application/javascript;
+        gzip_disable "msie6";
+        root /var/www/front;
+        try_files $uri /index.html;
+        autoindex off;
+    }
+}

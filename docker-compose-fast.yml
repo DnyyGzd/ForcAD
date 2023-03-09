@@ -1,0 +1,47 @@
+version: '2.4'
+
+x-celery-fast: &celery-fast
+  build:
+    context: .
+    dockerfile: ./docker_config/celery/Dockerfile.fast
+    args:
+      version: ${FORCAD_VERSION:-latest}
+
+x-service-fast: &service-fast
+  build:
+    context: .
+    dockerfile: ./docker_config/services/Dockerfile.fast
+    args:
+      version: ${FORCAD_VERSION:-latest}
+
+services:
+  celery:
+    <<: *celery-fast
+
+  flower:
+    <<: *celery-fast
+
+  initializer:
+    build:
+      context: .
+      dockerfile: ./docker_config/initializer/Dockerfile.fast
+      args:
+        version: ${FORCAD_VERSION:-latest}
+
+  ticker:
+    <<: *service-fast
+
+  client-api:
+    <<: *service-fast
+
+  admin-api:
+    <<: *service-fast
+
+  events:
+    <<: *service-fast
+
+  monitoring:
+    <<: *service-fast
+
+  http-receiver:
+    <<: *service-fast
