@@ -12,29 +12,30 @@ This repository has the sole purpose of speeding up the setup of ForcAD with ser
 
 ## Setup
 
-* Open `config.yml` file.
-   * Change admin `username` and `password`.
-   * Delete team example and add teams.
-   * Change `timezone` and `start_time` if you want.
+* Open `config.yml` file
+   * Change admin `username` and `password`
+   * Delete team example and add teams
+   * Change `timezone` and `start_time` if you want
    
-* Install `cli/requirements.txt` (`pip3 install -r cli/requirements.txt`)
+* Install `cli/requirements.txt`
+  * `pip3 install -r cli/requirements.txt`
 
-* Run `./control.py setup`.
+* Run `./control.py setup`
 
-* Run `./control.py print_tokens` and send them to each team correspondingly.
+* Run `./control.py print_tokens` and send them to each team correspondingly
 
-* Run `./control.py start`.
+* Run `./control.py start`
 
 
 ## Dashboard
 
-* Scoreboard: `http://127.0.0.1:8080/`.
-* Admin panel: `http://127.0.0.1:8080/admin/`.
+* Scoreboard: `http://127.0.0.1:8080/`
+* Admin panel: `http://127.0.0.1:8080/admin/`
 
 ## Stop Game
 
-* Run `./control.py reset`.
+* Run `./control.py reset`
 
 ## Info
 
-* Flag format: `[A-Z0-9]{31}=`.
+* Flag format: `[A-Z0-9]{31}=`
