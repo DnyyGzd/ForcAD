@@ -79,3 +79,4 @@ pip3 install -r requirements.txt
 * Run service
 ```shell
 python3 flags_shop/app.py
+```
