@@ -64,7 +64,18 @@ newgrp docker
 ## VulnBox
 
 ### Prerequisites
-* `pip3` installed
-   * `sudo apt install python3-pip`
+* Update your system
+```shell
+sudo apt update && sudo apt full-upgrade
+```
+* `pip3`
+```shell
+sudo apt install python3-pip
+```
 * Install `requirements.txt`
-  * `pip3 install -r requirements.txt`
+```shell
+pip3 install -r requirements.txt
+```
+* Run service
+```shell
+python3 flags_shop/app.py
