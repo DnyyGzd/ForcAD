@@ -39,11 +39,10 @@ bash setup-docker.sh
   * Change `timezone` and `start_time` (optional)
 * Run team vulnboxes with cybernetwork
   * `docker run -d --network=cybernetwork flags_shop`
-* Print team tokens and pause
-  * Run `./control.py setup && ./control.py start && ./control.py print_tokens && ./control.py pause`
-  * Send them to each team correspondingly
-* To resume
-  * Run `./control.py resume`
+* Start the AD
+  * Run `./control.py setup && ./control.py start`
+* Print team tokens and send to each team correspondingly
+  * Run `./control.py print_tokens`
 
 ### Stop Game
 * Run `./control.py reset`
