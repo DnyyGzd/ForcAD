@@ -19,10 +19,12 @@ bash setup.sh
 
 ### Configuration
 **_Re-login the user or reboot before configuring_**
+* If you have **ufw** installed
+ * `sudo ufw route allow from **change_me**/24 to 172.25.0.0/24`
 * Open `config.yml` file
-  * Change admin `username` and `password`
-  * Delete team example and add teams
-  * Change `timezone` and `start_time` (optional)
+ * Change admin `username` and `password`
+ * Delete team example and add teams
+ * Change `timezone` and `start_time` (optional)
 * Run `./control.py setup`
 * Run `./control.py start`
 * Run `./control.py print_tokens` and send them to each team correspondingly
