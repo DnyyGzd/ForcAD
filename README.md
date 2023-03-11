@@ -20,7 +20,7 @@ bash setup.sh
 ### Configuration
 **_Re-login the user or reboot before configuring_**
 * If you have **ufw** installed
-  * `sudo ufw route allow from **change_me**/24 to 172.25.0.0/24`
+ * `sudo ufw route allow from **change_me**/24 to 172.25.0.0/24`
 * Open `config.yml` file
   * Change admin `username` and `password`
   * Delete team example and add teams
