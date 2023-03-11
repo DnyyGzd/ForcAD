@@ -25,6 +25,8 @@ services:
     environment:
       - TEST
       - SERVICE=worker
+    networks:
+      - forcad_network
 
   flower:
     <<: *default-celery-ms
@@ -36,6 +38,8 @@ services:
       - ./docker_config/postgres_environment.env
       - ./docker_config/redis_environment.env
       - ./docker_config/rabbitmq_environment.env
+    networks:
+      - forcad_network
 
   initializer:
     build:
@@ -48,18 +52,24 @@ services:
       - TEST
       - CONFIG_PATH=/config.yml
     restart: on-failure
+    networks:
+      - forcad_network
 
   ticker:
     <<: *default-ms
     environment:
       - TEST
       - SERVICE=ticker
+    networks:
+      - forcad_network
 
   client-api:
     <<: *default-ms
     environment:
       - TEST
       - SERVICE=api
+    networks:
+      - forcad_network
 
   admin-api:
     <<: *default-ms
@@ -71,24 +81,32 @@ services:
       - ./docker_config/postgres_environment.env
       - ./docker_config/redis_environment.env
       - ./docker_config/rabbitmq_environment.env
+    networks:
+      - forcad_network
 
   events:
     <<: *default-ms
     environment:
       - TEST
       - SERVICE=events
+    networks:
+      - forcad_network
 
   monitoring:
     <<: *default-ms
     environment:
       - TEST
       - SERVICE=monitoring
+    networks:
+      - forcad_network
 
   http-receiver:
     <<: *default-ms
     environment:
       - TEST
       - SERVICE=http_receiver
+    networks:
+      - forcad_network
 
   nginx:
     build:
@@ -107,6 +125,8 @@ services:
       - events
       - monitoring
       - http-receiver
+    networks:
+      - forcad_network
 
   redis:
     image: redis:6.2.5-alpine
@@ -118,6 +138,8 @@ services:
       - ./docker_config/redis_environment.env
     ports:
       - "6379:6379"
+    networks:
+      - forcad_network
 
   rabbitmq:
     hostname: rabbitmq
@@ -128,6 +150,8 @@ services:
     ports:
       - "5672:5672"
       - "15672:15672"
+    networks:
+      - forcad_network
 
   postgres:
     image: postgres:13.4-alpine
@@ -139,3 +163,11 @@ services:
     ports:
       - "5432:5432"
       - "6432:5432"
+    networks:
+      - forcad_network
+
+networks:
+  forcad_network:
+    name: forcad_network
+    driver_opts:
+      com.docker.network.bridge.name: forcad_network
