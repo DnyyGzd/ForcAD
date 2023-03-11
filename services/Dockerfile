@@ -10,7 +10,7 @@ RUN echo 'root:CyberUnipa23!?' | chpasswd && \
 
 COPY . .
 
-RUN pip3 install -r requirements.txt
+RUN pip3 install -r flags_shop/requirements.txt
 
 EXPOSE 22
 EXPOSE 9876
