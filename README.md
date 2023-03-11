@@ -38,7 +38,7 @@ bash setup-docker.sh
     * Range 172.25.1.0 - 172.25.255.0
   * Change `timezone` and `start_time` (optional)
 * Run team vulnboxes with cybernetwork
-  * `docker run -d --network=cybernetwork services`
+  * `docker run -d --network=cyber_network services`
 * Start the AD
   * Run `./control.py setup && ./control.py start`
 * Print team tokens and send to each team correspondingly
