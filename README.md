@@ -15,7 +15,13 @@ wget https://raw.githubusercontent.com/DnyyGzd/ForcAD/main/setup.sh
 bash setup.sh
 ```
 
+**_Re-login the user or reboot before configuring_**
 
+### 2st step Setup
+```shell
+wget https://raw.githubusercontent.com/DnyyGzd/ForcAD/main/setup-docker.sh
+bash setup-docker.sh
+```
 
 
 
