@@ -23,7 +23,7 @@ bash setup.sh
 
 
 ### 2st step Setup
-Move to ForcAD directory
+**_Move to ForcAD directory_**
 ```shell
 bash setup-docker.sh
 ```
