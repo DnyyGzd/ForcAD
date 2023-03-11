@@ -17,6 +17,8 @@ bash setup.sh
 
 
 
+
+
 ### Configuration
 **_Re-login the user or reboot before configuring_**
 * If you have **ufw** installed
