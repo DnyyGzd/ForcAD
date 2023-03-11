@@ -31,11 +31,11 @@ bash setup-docker.sh
 
 ### Configuration
 * If you have **ufw** installed
-  * `sudo ufw route allow from <local_network>/24 to 172.25.0.0/24`
+  * `sudo ufw route allow from <local_network>/24 to 172.25.0.0/16`
 * Open `config.yml` file
   * Change admin `username` and `password`
   * Delete team example and add teams
-    * Range 172.25.0.2 - 172.25.0.254
+    * Range 172.25.1.0 - 172.25.255.0
   * Change `timezone` and `start_time` (optional)
 * Run team vulnboxes with cybernetwork
   * `docker run -d --network=cybernetwork services`
@@ -57,4 +57,4 @@ bash setup-docker.sh
 
 ## Team clients
 * Add cybernetwork to ip route
-  * `sudo ip route add 172.25.0.0/24 via <server_ip>`
+  * `sudo ip route add 172.25.0.0/16 via <server_ip>`
