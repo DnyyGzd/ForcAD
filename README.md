@@ -18,7 +18,7 @@ wget https://raw.githubusercontent.com/DnyyGzd/ForcAD/main/setup.sh
 bash setup.sh
 ```
 
-**_Re-login the user or reboot and move to ForcAD directory before configuring_**
+**_Re-login the user (or reboot) and move to ForcAD directory before configuring_**
 
 
 
