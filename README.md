@@ -9,8 +9,7 @@ In this case the whole system is configured starting from a clean Ubuntu 22.04 a
 
 ## Game Master
 
-### Automatic Script Setup
-You can setup your Game Master with the automatic script `setup.sh`:
+### 1st step Setup
 ```shell
 wget https://raw.githubusercontent.com/DnyyGzd/ForcAD/main/setup.sh
 bash setup.sh
