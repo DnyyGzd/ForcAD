@@ -31,7 +31,7 @@ bash setup-docker.sh
 
 ### Configuration
 * If you have **ufw** installed
-  * `sudo ufw route allow from **change_me**/24 to 172.25.0.0/24`
+  * `sudo ufw route allow from <local_network>/24 to 172.25.0.0/24`
 * Open `config.yml` file
   * Change admin `username` and `password`
   * Delete team example and add teams
@@ -53,3 +53,9 @@ bash setup-docker.sh
 * Admin panel: `http://127.0.0.1:8080/admin/`
 * Flag ids: `http://127.0.0.1/api/client/attack_data/`
 * Flag format: `[A-Z0-9]{31}=`
+
+
+
+## Team clients
+* Add cybernetwork to ip route
+  * `sudo ip route add 172.25.0.0/24 via <server_ip>`
