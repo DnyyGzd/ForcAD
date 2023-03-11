@@ -13,5 +13,8 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 
 git clone https://github.com/DnyyGzd/ForcAD
-pip3 install -r ForcAD/cli/requirements.txt
-chmod +x ForcAD/control.py
+cd ForcAD
+pip3 install -r cli/requirements.txt
+chmod +x control.py
+
+chmod o+rx checkers/flags_shop/checker.py
