@@ -18,11 +18,11 @@ wget https://raw.githubusercontent.com/DnyyGzd/ForcAD/main/setup.sh
 bash setup.sh
 ```
 
-**_Re-login the user (or reboot) and move to ForcAD directory before configuring_**
+**_Re-login the user (or reboot) and change to the ForcAD directory before continuing to the 2nd step_**
 
 
 
-### 2st step Setup
+### 2nd step Setup
 ```shell
 bash setup-docker.sh
 ```
