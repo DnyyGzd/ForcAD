@@ -23,8 +23,8 @@ bash setup.sh
 
 
 ### 2st step Setup
+Move to ForcAD directory
 ```shell
-wget https://raw.githubusercontent.com/DnyyGzd/ForcAD/main/setup-docker.sh
 bash setup-docker.sh
 ```
 
