@@ -6,12 +6,13 @@ RUN apt-get update && apt-get upgrade -y
 RUN apt-get install -y python3 python3-pip openssh-server
 RUN echo 'root:CyberUnipa23!?' | chpasswd && \
 	sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' \
-	/etc/ssh/sshd_config && \
-	service ssh start
+	/etc/ssh/sshd_config
 
 COPY . .
 
 RUN pip3 install -r requirements.txt
 
+EXPOSE 22
 EXPOSE 9876
-CMD [ "python3", "app.py" ]
+
+CMD [ "bash", "entrypoint.sh" ]
