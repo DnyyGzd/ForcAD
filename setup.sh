@@ -2,6 +2,7 @@ sudo apt update -y && sudo apt full-upgrade -y
 
 sudo apt install git -y
 sudo apt install python3-pip -y
+sudo apt install curl -y
 
 sudo apt install docker.io -y
 sudo systemctl enable docker --now
