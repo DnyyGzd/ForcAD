@@ -1,3 +1,5 @@
 service ssh start
-nohup python3 flags_shop/app.py &
+cd flags_shop
+nohup python3 app.py &
+cd ..
 tail -f /dev/null
