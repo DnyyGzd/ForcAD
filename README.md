@@ -1,7 +1,5 @@
 # ForcAD
 
-
-
 ## Initial premise
 ForcAD was not designed and created by me. I used the [ForcAD](https://github.com/pomo-mondreganto/ForcAD) made available by [pomo-mondreganto](https://github.com/pomo-mondreganto).
 This repository has the sole purpose of speeding up the setup of ForcAD with services and checkers written by me and my team.
@@ -58,3 +56,13 @@ bash setup-docker.sh
 ## Team clients
 * Add cybernetwork to ip route
   * `sudo ip route add 172.25.0.0/16 via <server_ip>`
+
+
+
+# Wireguard VPN
+
+## Game Master
+```shell
+wget https://raw.githubusercontent.com/angristan/wireguard-install/master/wireguard-install.sh
+sudo bash wireguard-install.sh
+```
