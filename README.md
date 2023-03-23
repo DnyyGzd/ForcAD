@@ -6,7 +6,7 @@ This repository has the sole purpose of speeding up the setup of ForcAD with ser
 
 In this case the whole system is configured starting from a clean Ubuntu 22.04 and using the potential of docker for the network infrastructure.
 
-
+<br/>
 
 ## Game Master
 
@@ -18,14 +18,10 @@ bash setup.sh
 
 **_Re-login the user (or reboot) and change to the ForcAD directory before continuing to the 2nd step_**
 
-
-
 ### 2nd step Setup
 ```shell
 bash setup-docker.sh
 ```
-
-
 
 ### Configuration
 * If you have **ufw** installed
@@ -51,18 +47,32 @@ bash setup-docker.sh
 * Flag ids: `http://<server_ip>/api/client/attack_data/`
 * Flag format: `[A-Z0-9]{31}=`
 
+<br/>
 
-
-## Team clients
+## Team Clients
 * Add cybernetwork to ip route
   * `sudo ip route add 172.25.0.0/16 via <server_ip>`
 
-
+<br/><br/>
 
 # Wireguard VPN
 
 ## Game Master
+Install Wireguard with automated script and create every client configuration file you want.
 ```shell
 wget https://raw.githubusercontent.com/angristan/wireguard-install/master/wireguard-install.sh
 sudo bash wireguard-install.sh
+```
+Add this line in `/etc/wireguard/wg0.conf`
+* `PostUp = iptables -t nat -I POSTROUTING -o cyber_network -j MASQUERADE`
+
+## Team Clients
+Get a client configuration file from the Game Master.
+```shell
+sudo apt install wireguard resolvconf
+```
+Move to your configuration file place.
+```shell
+sudo mv /etc/wireguard/client<x>.conf
+wg-quick up client<x>
 ```
