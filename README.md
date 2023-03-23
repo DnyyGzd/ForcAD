@@ -64,7 +64,7 @@ wget https://raw.githubusercontent.com/angristan/wireguard-install/master/wiregu
 sudo bash wireguard-install.sh
 ```
 Add this line in `/etc/wireguard/wg0.conf`
-* `PostUp = iptables -t nat -I POSTROUTING -o cyber_network -j MASQUERADE`
+`PostUp = iptables -t nat -I POSTROUTING -o cyber_network -j MASQUERADE`
 
 <br/>
 
