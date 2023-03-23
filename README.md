@@ -48,9 +48,9 @@ bash setup-docker.sh
 * Run `./control.py reset`
 
 ### Info
-* Scoreboard: `http://127.0.0.1/`
-* Admin panel: `http://127.0.0.1/admin/`
-* Flag ids: `http://127.0.0.1/api/client/attack_data/`
+* Scoreboard: `http://<server_ip>/`
+* Admin panel: `http://<server_ip>/admin/`
+* Flag ids: `http://<server_ip>/api/client/attack_data/`
 * Flag format: `[A-Z0-9]{31}=`
 
 
