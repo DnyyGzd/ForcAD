@@ -66,6 +66,8 @@ sudo bash wireguard-install.sh
 Add this line in `/etc/wireguard/wg0.conf`
 * `PostUp = iptables -t nat -I POSTROUTING -o cyber_network -j MASQUERADE`
 
+<br/>
+
 ## Team Clients
 Get a client configuration file from the Game Master.
 ```shell
