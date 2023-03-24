@@ -70,7 +70,7 @@ sudo bash wireguard-install.sh
 Add this line in `/etc/wireguard/wg0.conf`<br/>
 * `PostUp = iptables -t nat -I POSTROUTING -o cyber_network -j MASQUERADE`
 * `PostUp = iptables -I DOCKER-USER -i cyber_network -o forcad_network -j ACCEPT`
-* `PostUp = sudo iptables -I DOCKER-USER -i forcad_network -o cyber_network -j ACCEPT`
+* `PostUp = iptables -I DOCKER-USER -i forcad_network -o cyber_network -j ACCEPT`
 
 <br/>
 
