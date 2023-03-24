@@ -67,7 +67,7 @@ sudo bash wireguard-install.sh
 * Server Wireguard IPv4: 172.25.250.0
 * Allowed IPs list: 172.25.0.0/16
 
-Add this line in `/etc/wireguard/wg0.conf`<br/>
+Add these lines in `/etc/wireguard/wg0.conf`<br/>
 * `PostUp = iptables -t nat -I POSTROUTING -o cyber_network -j MASQUERADE`
 * `PostUp = iptables -I DOCKER-USER -i cyber_network -o forcad_network -j ACCEPT`
 * `PostUp = iptables -I DOCKER-USER -i forcad_network -o cyber_network -j ACCEPT`
