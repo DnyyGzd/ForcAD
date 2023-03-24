@@ -24,6 +24,7 @@ bash setup-docker.sh
 ```
 
 ### Configuration
+* Set VPN if you have Game Master and Clients in different subnets
 * If you have **ufw** installed
   * `sudo ufw route allow from <local_network>/24 to 172.25.0.0/16`
 * Open `config.yml` file
