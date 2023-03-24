@@ -63,8 +63,10 @@ Install Wireguard with automated script and create every client configuration fi
 wget https://raw.githubusercontent.com/angristan/wireguard-install/master/wireguard-install.sh
 sudo bash wireguard-install.sh
 ```
+* Server Wireguard IPv4: 172.25.250.0
+
 Add this line in `/etc/wireguard/wg0.conf`<br/>
-`PostUp = iptables -t nat -I POSTROUTING -o cyber_network -j MASQUERADE`
+* `PostUp = iptables -t nat -I POSTROUTING -o cyber_network -j MASQUERADE`
 
 <br/>
 
