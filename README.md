@@ -22,7 +22,7 @@ bash setup-docker.sh
 ```
 
 ## VPN Configuration
-Install Wireguard with automated script and create every client configuration file you want.
+Install Wireguard with automated script.
 ```shell
 wget https://raw.githubusercontent.com/angristan/wireguard-install/master/wireguard-install.sh
 sudo bash wireguard-install.sh
@@ -30,10 +30,18 @@ sudo bash wireguard-install.sh
 * Server Wireguard IPv4: 172.25.250.1
 * Allowed IPs list: 172.25.0.0/16
 
-Add these lines in `/etc/wireguard/wg0.conf`<br/>
+Create every client configuration file you want.
+
+Add these lines in `/etc/wireguard/wg0.conf`
 * `PostUp = iptables -t nat -I POSTROUTING -o cyber_network -j MASQUERADE`
 * `PostUp = iptables -I DOCKER-USER -i cyber_network -o forcad_network -j ACCEPT`
 * `PostUp = iptables -I DOCKER-USER -i forcad_network -o cyber_network -j ACCEPT`
+
+Restart VPN
+```shell
+wg-quick down wg0
+wg-quick up wg0
+```
 
 ## ForcAD Configuration
 * Open `config.yml` file
