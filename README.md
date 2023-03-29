@@ -64,7 +64,7 @@ Install Wireguard with automated script and create every client configuration fi
 wget https://raw.githubusercontent.com/angristan/wireguard-install/master/wireguard-install.sh
 sudo bash wireguard-install.sh
 ```
-* Server Wireguard IPv4: 172.25.250.0
+* Server Wireguard IPv4: 172.25.250.1
 * Allowed IPs list: 172.25.0.0/16
 
 Add these lines in `/etc/wireguard/wg0.conf`<br/>
