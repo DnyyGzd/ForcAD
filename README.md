@@ -47,6 +47,7 @@ bash setup-docker.sh
 * Admin panel: `http://<server_ip>/admin/`
 * Flag ids: `http://<server_ip>/api/client/attack_data/`
 * Flag format: `[A-Z0-9]{31}=`
+* Submit flags: `http://<server_ip>/flags`
 
 <br/>
 
