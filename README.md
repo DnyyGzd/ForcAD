@@ -8,7 +8,8 @@ In this case the whole system is configured starting from a clean Ubuntu 22.04 a
 
 # Game Master
 
-## 1st step Setup
+## Setup
+### 1st step
 ```shell
 wget https://raw.githubusercontent.com/DnyyGzd/ForcAD/main/setup.sh
 bash setup.sh
@@ -16,7 +17,7 @@ bash setup.sh
 
 **_Re-login the user (or reboot) and change to the ForcAD directory before continuing to the 2nd step_**
 
-## 2nd step Setup
+### 2nd step Setup
 ```shell
 bash setup-docker.sh
 ```
@@ -87,3 +88,36 @@ wg-quick up <conf_file>
   * `http://172.25.250.1/flags`
 
 <br/>
+
+# First AD?
+
+## Reconnaissance
+* Access the vulnbox with ssh
+  * `ssh root@172.25.<x>.0`
+* Find out which services are active and where the code is located (you may need to install software such as netstat)
+  * You could focus on active processes and listening ports
+* Study the code and find some vulnerabilities
+  * You could run tests on your vulnbox, find out where the flag is and how you might get it
+  * Often the Game Master provides information such as usernames to help you find the flags (flag ids)
+  * Avoid doing tests on other people's vulnboxes, you might provide information about what aspect of the software you are working on
+
+## Traffic Analysis
+* You could do a tcpdump on the vulnbox to monitor network traffic
+  * Keep in mind that the Game Master also makes requests, they are not all from the other teams
+  * Do you see any suspicious traffic? It could be an attack, study it, attack others and patch the vulnerability
+
+## Attack
+* Found the vulnerability to get the flag, you have to automate the attack
+  * Write an automated script that allows you to get a flag given an ip (and optionally a flag id)
+  * Send the flag to the Game Master along with your token to increase your score
+
+## Code to submit flags
+```python
+#!/usr/bin/python3
+
+import requests
+
+def submit_flags(ip, team_token, flags):
+	print(requests.put(f'http://172.25.250.1/flags', headers={'X-Team-Token': team_token}, json=flags).text)
+```
+Please note: flags must be a list.
