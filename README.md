@@ -91,6 +91,9 @@ wg-quick up <conf_file>
 
 # First AD?
 
+## User info
+* root : CyberUnipa23!?
+
 ## Reconnaissance
 * Access the vulnbox with ssh
   * `ssh root@172.25.<x>.0`
