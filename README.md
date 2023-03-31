@@ -117,7 +117,7 @@ wg-quick up <conf_file>
 
 import requests
 
-def submit_flags(ip, team_token, flags):
+def submit_flags(team_token, flags):
 	print(requests.put(f'http://172.25.250.1/flags', headers={'X-Team-Token': team_token}, json=flags).text)
 ```
 Please note: flags must be a list.
