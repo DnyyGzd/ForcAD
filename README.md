@@ -93,7 +93,7 @@ wg-quick up <conf_file>
 
 ## Prerequisites
 * Install wireguard
-  * `sudo apt install wireguard
+  * `sudo apt install wireguard`
 * Download the vpn configuration file `client<x>.conf`
 * Move the `client<x>.conf` to `/etc/wireguard/client<x>.conf`
 * Connect to VPN server
