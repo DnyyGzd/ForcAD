@@ -93,6 +93,8 @@ wg-quick up <conf_file>
 
 ## User info
 * root : CyberUnipa23!?
+* Change password
+  * `passwd`
 
 ## Reconnaissance
 * Access the vulnbox with ssh
