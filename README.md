@@ -91,6 +91,14 @@ wg-quick up <conf_file>
 
 # First AD?
 
+## Prerequisites
+* Install wireguard
+  * `sudo apt install wireguard
+* Download the vpn configuration file `client<x>.conf`
+* Move the `client<x>.conf` to `/etc/wireguard/client<x>.conf`
+* Connect to VPN server
+  * `wg-quick up client<x>
+
 ## User info
 * root : CyberUnipa23!?
 * Change password
