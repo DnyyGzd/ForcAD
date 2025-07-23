@@ -4,7 +4,7 @@ ENV PYTHONUNBUFFERED=1
 ENV PYTHONPATH=${PYTHONPATH}:/app
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends gcc libpq-dev \
+    && apt-get install -y --no-install-recommends gcc libpq-dev libmpfr-dev libgmp-dev libmpc-dev \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
