@@ -19,6 +19,8 @@ services:
     volumes:
       - /var/lib/docker/overlay2:/var/lib/docker/overlay2
       - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
+    depends_on:
+      - vulnbox1
   vulnbox3:
     container_name: vulnbox3
     build: ./vulnbox
@@ -29,6 +31,8 @@ services:
     volumes:
       - /var/lib/docker/overlay2:/var/lib/docker/overlay2
       - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
+    depends_on:
+      - vulnbox1
   vulnbox4:
     container_name: vulnbox4
     build: ./vulnbox
@@ -39,6 +43,8 @@ services:
     volumes:
       - /var/lib/docker/overlay2:/var/lib/docker/overlay2
       - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
+    depends_on:
+      - vulnbox1
   vulnbox5:
     container_name: vulnbox5
     build: ./vulnbox
@@ -49,6 +55,8 @@ services:
     volumes:
       - /var/lib/docker/overlay2:/var/lib/docker/overlay2
       - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
+    depends_on:
+      - vulnbox1
   vulnbox6:
     container_name: vulnbox6
     build: ./vulnbox
@@ -59,6 +67,8 @@ services:
     volumes:
       - /var/lib/docker/overlay2:/var/lib/docker/overlay2
       - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
+    depends_on:
+      - vulnbox1
   vulnbox7:
     container_name: vulnbox7
     build: ./vulnbox
@@ -69,6 +79,8 @@ services:
     volumes:
       - /var/lib/docker/overlay2:/var/lib/docker/overlay2
       - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
+    depends_on:
+      - vulnbox1
   vulnbox8:
     container_name: vulnbox8
     build: ./vulnbox
@@ -79,6 +91,8 @@ services:
     volumes:
       - /var/lib/docker/overlay2:/var/lib/docker/overlay2
       - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
+    depends_on:
+      - vulnbox1
   vulnbox9:
     container_name: vulnbox9
     build: ./vulnbox
@@ -89,6 +103,8 @@ services:
     volumes:
       - /var/lib/docker/overlay2:/var/lib/docker/overlay2
       - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
+    depends_on:
+      - vulnbox1
   vulnbox10:
     container_name: vulnbox10
     build: ./vulnbox
@@ -99,6 +115,8 @@ services:
     volumes:
       - /var/lib/docker/overlay2:/var/lib/docker/overlay2
       - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
+    depends_on:
+      - vulnbox1
   vulnbox11:
     container_name: vulnbox11
     build: ./vulnbox
@@ -109,6 +127,8 @@ services:
     volumes:
       - /var/lib/docker/overlay2:/var/lib/docker/overlay2
       - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
+    depends_on:
+      - vulnbox1
   vulnbox12:
     container_name: vulnbox12
     build: ./vulnbox
@@ -119,6 +139,8 @@ services:
     volumes:
       - /var/lib/docker/overlay2:/var/lib/docker/overlay2
       - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
+    depends_on:
+      - vulnbox1
   vulnbox13:
     container_name: vulnbox13
     build: ./vulnbox
@@ -129,6 +151,8 @@ services:
     volumes:
       - /var/lib/docker/overlay2:/var/lib/docker/overlay2
       - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
+    depends_on:
+      - vulnbox1
   vulnbox14:
     container_name: vulnbox14
     build: ./vulnbox
@@ -139,6 +163,8 @@ services:
     volumes:
       - /var/lib/docker/overlay2:/var/lib/docker/overlay2
       - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
+    depends_on:
+      - vulnbox1
   vulnbox15:
     container_name: vulnbox15
     build: ./vulnbox
@@ -149,6 +175,8 @@ services:
     volumes:
       - /var/lib/docker/overlay2:/var/lib/docker/overlay2
       - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
+    depends_on:
+      - vulnbox1
   vulnbox16:
     container_name: vulnbox16
     build: ./vulnbox
@@ -159,6 +187,8 @@ services:
     volumes:
       - /var/lib/docker/overlay2:/var/lib/docker/overlay2
       - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
+    depends_on:
+      - vulnbox1
   vulnbox17:
     container_name: vulnbox17
     build: ./vulnbox
@@ -169,6 +199,8 @@ services:
     volumes:
       - /var/lib/docker/overlay2:/var/lib/docker/overlay2
       - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
+    depends_on:
+      - vulnbox1
   vulnbox18:
     container_name: vulnbox18
     build: ./vulnbox
@@ -179,6 +211,8 @@ services:
     volumes:
       - /var/lib/docker/overlay2:/var/lib/docker/overlay2
       - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
+    depends_on:
+      - vulnbox1
   vulnbox19:
     container_name: vulnbox19
     build: ./vulnbox
@@ -189,6 +223,8 @@ services:
     volumes:
       - /var/lib/docker/overlay2:/var/lib/docker/overlay2
       - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
+    depends_on:
+      - vulnbox1
   vulnbox20:
     container_name: vulnbox20
     build: ./vulnbox
@@ -199,6 +235,8 @@ services:
     volumes:
       - /var/lib/docker/overlay2:/var/lib/docker/overlay2
       - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
+    depends_on:
+      - vulnbox1
   vulnbox21:
     container_name: vulnbox21
     build: ./vulnbox
@@ -209,6 +247,8 @@ services:
     volumes:
       - /var/lib/docker/overlay2:/var/lib/docker/overlay2
       - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
+    depends_on:
+      - vulnbox1
   vulnbox22:
     container_name: vulnbox22
     build: ./vulnbox
@@ -219,6 +259,8 @@ services:
     volumes:
       - /var/lib/docker/overlay2:/var/lib/docker/overlay2
       - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
+    depends_on:
+      - vulnbox1
   vulnbox23:
     container_name: vulnbox23
     build: ./vulnbox
@@ -229,6 +271,8 @@ services:
     volumes:
       - /var/lib/docker/overlay2:/var/lib/docker/overlay2
       - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
+    depends_on:
+      - vulnbox1
   vulnbox24:
     container_name: vulnbox24
     build: ./vulnbox
@@ -239,6 +283,8 @@ services:
     volumes:
       - /var/lib/docker/overlay2:/var/lib/docker/overlay2
       - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
+    depends_on:
+      - vulnbox1
   vulnbox25:
     container_name: vulnbox25
     build: ./vulnbox
@@ -249,6 +295,8 @@ services:
     volumes:
       - /var/lib/docker/overlay2:/var/lib/docker/overlay2
       - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
+    depends_on:
+      - vulnbox1
 
 networks:
   cyber_network:
