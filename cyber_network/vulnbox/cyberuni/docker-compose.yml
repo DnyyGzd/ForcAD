@@ -13,8 +13,6 @@ services:
     volumes:
       - ./examportal/db/init:/docker-entrypoint-initdb.d
       - ./examportal/db/data:/var/lib/mysql
-    dns:                # Unipa ready
-      - 10.60.0.1       # Unipa ready
 
   auth_service:
     build: ./auth_service
@@ -22,8 +20,6 @@ services:
     ports:
       - "0.0.0.0:1234:8000"
     restart: unless-stopped
-    dns:                # Unipa ready
-      - 10.60.0.1       # Unipa ready
 
   examnotes:
     build: ./examnotes
@@ -31,8 +27,6 @@ services:
     ports:
       - "0.0.0.0:1235:8000"
     restart: unless-stopped
-    dns:                # Unipa ready
-      - 10.60.0.1       # Unipa ready
 
   encryptednotes:
     build: ./encryptednotes
@@ -40,8 +34,6 @@ services:
     ports:
       - "0.0.0.0:1236:8000"
     restart: unless-stopped
-    dns:                # Unipa ready
-      - 10.60.0.1       # Unipa ready
 
   examportal:
     build: ./examportal
@@ -56,5 +48,3 @@ services:
     restart: unless-stopped
     depends_on:
       - examportal-db
-    dns:                # Unipa ready
-      - 10.60.0.1       # Unipa ready
