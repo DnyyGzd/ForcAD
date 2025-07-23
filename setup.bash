@@ -9,7 +9,7 @@ sudo sysctl -w fs.aio-max-nr=2097152
 
 git clone https://github.com/DnyyGzd/ForcAD
 
-pip3 install -r ForcAD/cli/requirements.txt
+pip3 install -r ForcAD/cli/requirements.txt --break-system-packages
 chmod +x ForcAD/control.py
 
 chmod +x ForcAD/checkers/flags_shop/checker.py
